@@ -1,0 +1,147 @@
+
+/*~~~~~~~~~~~~~~~~~~~~ Body and general Settings ~~~~~~~~~~~~~~~~~~~*/
+body{
+    color: #4a4a4a;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navigation  ~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.navbar{
+    background-color: black;
+}
+
+.logobox{
+    padding-left: 5px;
+}
+
+.navBarLogo{
+    width: 40px;
+}
+
+.navIcon{
+    justify-content: flex-end;
+}
+
+.navbar-collapse{
+    width: 100px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.iconcog{
+    color: #e8aeee;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding-top: 3px;
+}
+
+.iconcog:hover{
+    cursor: pointer;
+}
+
+.logo_name{
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+    color: #ffff;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+.homelogofirst{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.homelogotext{
+    font-size: 0.95rem;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.settings_col{
+    width: 12%;
+    border: 2px solid #0000;
+    background-color: #f5f5f5f5;
+    height: calc(100vh - 60px);
+    box-shadow:1px 1px 1px lightgrey;
+    margin: 0px!important;
+}
+
+.col_headings{
+    font-family:sans-serif;
+    padding-top: 1px;
+    font-size: 0.75rem;
+    letter-spacing: .1rem;
+    color: #7a7a7a;
+    text-transform: uppercase;
+}
+
+.user{
+    padding-right: 5px;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~ Media Queries ~~~~~~~~~~~~~~~~~~~*/
+
+@media only screen and (min-width: 990px){
+}
+
+@media only screen and (max-width: 990px){
+    
+}
+
+@media only screen and (max-width: 768px){
+  
+}  
+
+@media only screen and (max-width: 762px){
+   
+}  
+
+@media only screen and (max-width: 572px){
+    
+}    
+
+@media only screen and (max-width: 425px){
+  
+}    
+   
+
+@media only screen and (max-width: 375px){
+    
+}    
+
+
+@media only screen and (max-width: 320px){
+    
+}
+

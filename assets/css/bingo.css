@@ -1,0 +1,52 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src:url('../fonts/digital-7.ttf');
+}
+
+#table{
+   padding-top: 25px;
+   padding-left: 20px;
+}
+
+.new_number{
+    margin-top: -100px;
+    font-size: 20rem;
+}
+
+.count_down{
+    font-family: digital-clock-font;
+    font-size: 3rem;
+    color: red;  
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.rounded-corners{
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 50px;
+    border:1px solid black;
+    display: inline;
+    margin-left: 10px;
+    padding: 10px;
+    font-weight: bold;
+    background-image: radial-gradient(circle, white 30%, #009F00 60%);
+}
+
+.cells{
+    padding-top: 10px;
+}
+
+.picked{
+    background-image: radial-gradient(circle, white 30%, rgb(255, 0, 0) 60%);
+}
+
+.reset_number_colors{
+    background-color: green;
+}
