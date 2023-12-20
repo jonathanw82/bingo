@@ -12,7 +12,7 @@ function modalOpen () {
     dance_counter++; 
     /*  Increment a counter and use it to change what happens if the 
         counter is greater that the amount of videos */
-    if(dance_counter < 3){
+    if(dance_counter < video_url.length){
         music.pause();
         game_pause();
         
