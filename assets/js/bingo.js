@@ -14,7 +14,6 @@ window.onload = (event) => {
 const count_down = document.getElementById("count_down");
 let number_array = [];  // array to store called numbers
 const new_number = document.getElementById("new_number"); // new_number disaplats the current number
-const game_over = document.getElementById("game_over"); // after 90 numbs have been called display game over
 const call_button = document.getElementById("call_button");
 call_button.addEventListener("click", () => generate_number("manual"));
 call_button.addEventListener("click", () => game_status("manual"));
@@ -41,7 +40,7 @@ function generate_number(mode){
             if(!isManual)generate_number();
             else generate_number("manual");
         }else{
-            game_over.innerHTML = "Game Over";
+            end_game_modal("game_over");
         }
     }
     isManual = false;

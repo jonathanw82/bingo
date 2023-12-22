@@ -4,6 +4,7 @@ const modal_open = document.getElementById('modal_open').addEventListener('click
 const modla_close =  document.getElementById("modla_close").addEventListener('click', modalClose);
 const modal_content = document.getElementById('model_content');
 const restart_vids = document.getElementById('refresh_videos').addEventListener('click', refresh_videos);
+const end_game_video = document.getElementById("end_game_video").addEventListener('click', () => end_game_modal("end_credit"));
 
 let dance_counter = 0;
 const video_url = ["",video1_url, video2_url, video3_url, video4_url, video5_url];
@@ -23,18 +24,22 @@ function modalOpen () {
         // generate the content for the video modal
         modal_content.innerHTML = `<video class="video_size" id="video">
             <source src="${video_url_location_number}" type="video/mp4"></video>`;
-        
-        let video = document.getElementById("video");
-
-        // coutesy of stack overflow to prevent The play() request was interrupted by a call to pause() 
-        // https://stackoverflow.com/questions/6877403/how-to-tell-if-a-video-element-is-currently-playing/6877530#6877530
-        let isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
-            && video.readyState > video.HAVE_CURRENT_DATA;
-        if (!isPlaying) {
-            video.play();
-        }
+            check_video_for_play();
+       
     }else{
         modal_content.innerHTML = `<div>no more videos</div>`
+    }
+}
+
+function check_video_for_play(){
+    /* Check if video and auto play
+     coutesy of stack overflow to prevent The play() request was interrupted by a call to pause() 
+     https://stackoverflow.com/questions/6877403/how-to-tell-if-a-video-element-is-currently-playing/6877530#6877530 */
+    let video = document.getElementById("video");
+    let isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+        && video.readyState > video.HAVE_CURRENT_DATA;
+    if (!isPlaying) {
+        video.play();
     }
 }
 
@@ -66,4 +71,22 @@ function refresh_videos(){
         video_array.pop();
     }
     dance_counter = 0; // reset the dance counter for next game
+}
+
+function end_game_modal(action){
+    let modal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {});
+    modal.show();
+    // if(action == "game_over"){
+    //     modal_content.innerHTML = `<img src="assets/media/gameover.gif" class="game_over">`;
+    // }
+    switch(action){
+        case "game_over":
+            modal_content.innerHTML = `<img src="assets/media/gameover.gif" class="game_over">`;
+        break;
+        case "end_credit":
+            modal_content.innerHTML = `<video class="video_size" id="video">
+                                            <source src="${endCredit_vid}" type="video/mp4"></video>`;
+            check_video_for_play();
+        break;
+    }
 }

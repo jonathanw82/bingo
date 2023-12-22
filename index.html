@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://kit.fontawesome.com/a71ecb4f79.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a71ecb4f79.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.ico">	
-	<link rel="stylesheet" href='./assets/css/index.css' type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.ico">
+    <link rel="stylesheet" href='./assets/css/index.css' type="text/css">
     <link rel="stylesheet" href='./assets/css/bingo.css' type="text/css">
     <link rel="stylesheet" href='./assets/css/modal.css' type="text/css">
 </head>
-    <title>Dark Ostara</title>
+<title>Dark Ostara</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg">
-		<div class="container-fluid logobox">
-		  <img class="navBarLogo" src="assets/media/ostaralogo.png" alt="LettUsGrow logo">
-		  <a class="navbar-brand logo_name" href="#">Dark Ostara</a>
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"><i class="fas fa-cog iconcog nav_icon"></i></span>
-		  </button>
-		  <div class="collapse navbar-collapse navIcon" id="navbarNavAltMarkup">
-            <div class="user">User : <span id="user"></span></div>
-			</div>
-		  </div>
-		</div>
-	</nav>
+        <div class="container-fluid logobox">
+            <img class="navBarLogo" src="assets/media/ostaralogo.png" alt="LettUsGrow logo">
+            <a class="navbar-brand logo_name" href="#">Dark Ostara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-cog iconcog nav_icon"></i></span>
+            </button>
+            <div class="collapse navbar-collapse navIcon" id="navbarNavAltMarkup">
+                <div class="user">User : <span id="user"></span></div>
+            </div>
+        </div>
+        </div>
+    </nav>
 
     <div class="container-fluid">
         <div class="row">
@@ -55,78 +58,86 @@
             <div class="col">
                 <div id="table">
                     <div class="cells" id="zeros"></div><br>
-                    <div class="cells" id="10s"></div><br> 
-                    <div class="cells" id="20s"></div><br>  
-                    <div class="cells" id="30s"></div><br>  
-                    <div class="cells" id="40s"></div><br>  
-                    <div class="cells" id="50s"></div><br>  
-                    <div class="cells" id="60s"></div><br>  
-                    <div class="cells" id="70s"></div><br>  
-                    <div class="cells" id="80s"></div><br>  
+                    <div class="cells" id="10s"></div><br>
+                    <div class="cells" id="20s"></div><br>
+                    <div class="cells" id="30s"></div><br>
+                    <div class="cells" id="40s"></div><br>
+                    <div class="cells" id="50s"></div><br>
+                    <div class="cells" id="60s"></div><br>
+                    <div class="cells" id="70s"></div><br>
+                    <div class="cells" id="80s"></div><br>
                 </div>
 
                 <div>
-                    <div id="game_over"></div>
                     <div id="track_selection">
-                        <input type="radio" id="track1" name="radio" value="theme" checked/>
+                        <input type="radio" id="track1" name="radio" value="theme" checked />
                         <label for="track1">Theme</label>
-                        <input type="radio" id="track2" name="radio" value="winner"/>
+                        <input type="radio" id="track2" name="radio" value="winner" />
                         <label for="track2">Winner</label>
                     </div>
                     <audio id="music" controls></audio>
                     <br>
-                    <input type="button" ID="play_button" value="CUE">
-                    <input type="button" id="replay" value="REPLAY">
-                         <!-- Button trigger modal -->
-                    <button type="button" id="modal_open" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <input type="button" class="btn btn-secondary" id="play_button" value="CUE">
+                    <input type="button" class="btn btn-secondary" id="replay" value="REPLAY">
+
+                    <button type="button" id="modal_open" class="btn btn-danger dance_button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
                         Dance </button>
-                    <input type="button" id="refresh_videos" value="Refresh Videos">
-                </div>         
-               
+                        <br><br>
+                    <button type="button" class="btn btn-secondary" id="refresh_videos">Refresh Videos <i
+                            class="fa fa-solid fa-rotate-right"></i></button>
+                    
+                    <button type="button" class="btn btn-secondary" id="end_game_video">End Credits</button>
+                </div>
+
             </div>
             <div class="col">
                 <!-- New number generated here -->
-                <div class="new_number" id="new_number"></div> 
+                <div class="new_number" id="new_number"></div>
                 <div id="status"></div>
-                <button id="call_button" class="btn-secondary">Call  <i class="fa fa-solid fa-play"></i></button>
-                <button id="auto_button" class="btn-secondary">Auto  <i class="fa fa-solid fa-forward"></i></button>
-                <button id="auto_pause_button" class="btn-secondary">Pause  <i class="fa fa-solid fa-pause"></i></button>
-                <button id="reset_button" class="btn-secondary">Refresh  <i class="fa fa-solid fa-rotate-right"></i></button>
+                <button id="call_button" class="btn-secondary">Call <i class="fa fa-solid fa-play"></i></button>
+                <button id="auto_button" class="btn-secondary">Auto <i class="fa fa-solid fa-forward"></i></button>
+                <button id="auto_pause_button" class="btn-secondary">Pause <i class="fa fa-solid fa-pause"></i></button>
+                <button id="reset_button" class="btn-secondary">Refresh <i
+                        class="fa fa-solid fa-rotate-right"></i></button>
                 <br>
                 <br>
                 <label for="speed">Auto Game Speed: </label>
                 <select name="speed" id="speed">
-                    <option value= 4000>4 seconds</option>
-                    <option value= 5000>5 seconds</option>
-                    <option value= 6000>6 seconds</option>
-                    <option value= 7000>7 seconds</option>
-                    <option value= 8000>8 seconds</option>
-                    <option value= 10000>10 seconds</option>
-                    <option value= 12000>12 seconds</option>
-                    <option value= 15000>15 seconds</option>
-                </select>    
+                    <option value=4000>4 seconds</option>
+                    <option value=5000>5 seconds</option>
+                    <option value=6000>6 seconds</option>
+                    <option value=7000>7 seconds</option>
+                    <option value=8000>8 seconds</option>
+                    <option value=10000>10 seconds</option>
+                    <option value=12000>12 seconds</option>
+                    <option value=15000>15 seconds</option>
+                </select>
                 <div id="timer_dispalay">Next Number In: <span class="count_down" id="count_down">0</span></div>
-            </div>    
+            </div>
         </div>
-          <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-size modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="model_content" clas="model content">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="model_content" clas="model content">
+                        </div>
                     </div>
+                    <button type="button" id="modla_close" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
                 </div>
-                <button type="button" id="modla_close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
             </div>
         </div>
-    </div> 
+    </div>
 
-  
-<script src="./assets/js/index.js"></script>
-<script src="./assets/js/bingo.js"></script>
-<script src="./assets/js/music.js"></script>
-<script src="./assets/js/video_urls.js"></script>
-<script src="./assets/js/video_modal.js"></script>
+
+    <script src="./assets/js/video_urls.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/bingo.js"></script>
+    <script src="./assets/js/video_modal.js"></script>
+    <script src="./assets/js/music.js"></script>
 </body>
+
 </html>
