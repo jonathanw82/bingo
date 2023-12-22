@@ -28,7 +28,7 @@
 			<span class="navbar-toggler-icon"><i class="fas fa-cog iconcog nav_icon"></i></span>
 		  </button>
 		  <div class="collapse navbar-collapse navIcon" id="navbarNavAltMarkup">
-            <div class="user">User: <span id="user"></span></div>
+            <div class="user">User : <span id="user"></span></div>
 			</div>
 		  </div>
 		</div>
@@ -80,6 +80,7 @@
                          <!-- Button trigger modal -->
                     <button type="button" id="modal_open" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Dance </button>
+                    <input type="button" id="refresh_videos" value="Refresh Videos">
                 </div>         
                
             </div>
@@ -112,7 +113,8 @@
             <div class="modal-dialog modal-size modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div id="model_content" clas="model content"></div>
+                    <div id="model_content" clas="model content">
+                    </div>
                 </div>
                 <button type="button" id="modla_close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
@@ -124,6 +126,7 @@
 <script src="./assets/js/index.js"></script>
 <script src="./assets/js/bingo.js"></script>
 <script src="./assets/js/music.js"></script>
+<script src="./assets/js/video_urls.js"></script>
 <script src="./assets/js/video_modal.js"></script>
 </body>
 </html>

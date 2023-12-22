@@ -16,7 +16,7 @@ let number_array = [];  // array to store called numbers
 const new_number = document.getElementById("new_number"); // new_number disaplats the current number
 const game_over = document.getElementById("game_over"); // after 90 numbs have been called display game over
 const call_button = document.getElementById("call_button");
-call_button.addEventListener("click", () =>generate_number("manual"));
+call_button.addEventListener("click", () => generate_number("manual"));
 call_button.addEventListener("click", () => game_status("manual"));
 
 let isManual = false;
@@ -47,17 +47,21 @@ function generate_number(mode){
     isManual = false;
 }
 
-// reset the page to start a new game
 const reset_button = document.getElementById("reset_button").addEventListener("click", reset_page);
 function reset_page(){
+    // reset the page to start a new game
     counter("clear");
     clearInterval(auto_mode);
     new_number.innerHTML = 0;
+    // toggle all css on each called number back to its original value
     for(let i = 0; i < number_array.length; i++){
         let cell = document.getElementById(number_array[i]);
         cell.classList.toggle("picked");
     }
-    number_array = [];
+    // empty the number array ready fro a new game
+    while (number_array.length > 0){
+        number_array.pop();
+    }
 }
 
 const rowZero = document.getElementById("zeros");
