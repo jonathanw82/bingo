@@ -1,0 +1,23 @@
+.cue_button{
+    background-color:#39ff14;
+    color: black;
+}
+
+.replay_button{
+    background-color:yellow;
+    color: black;
+} 
+
+.dance_button{
+    background-color:red;
+    animation: flash 2s infinite;
+}
+@keyframes flash{
+    50%{
+        background-color: darkred;
+    }
+}
+
+#options{
+    margin-bottom: 10px;
+}

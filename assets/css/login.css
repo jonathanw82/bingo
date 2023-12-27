@@ -1,0 +1,44 @@
+body{
+    /* background-color: #7dbe22!important; */
+    background-image: linear-gradient(darkred, green);
+}
+
+.version_text{
+    padding-top: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.login_name{
+    color: white;
+}
+
+.incorrect{
+    color: white;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    text-align: center;
+    width: 25rem;
+    background-color: black;
+}
+
+.card-body{
+    padding-top: 50px;
+}
+
+.card-img-top{
+    width: 70%;
+    
+}
+.image_box{
+    padding-top: 50px;
+    
+}

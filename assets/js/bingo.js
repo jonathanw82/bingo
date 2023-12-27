@@ -3,14 +3,6 @@
 const min_game_numbers = 1;
 const max_game_numbers = 90;  
 
-window.onload = (event) => {
-    new_number.innerHTML = 0;
-    generate_called_number_table();
-    game_status("manual");
-    game_speed.value = 6000;
-    select_track();
-};
-
 const count_down = document.getElementById("count_down");
 let number_array = [];  // array to store called numbers
 const new_number = document.getElementById("new_number"); // new_number disaplats the current number

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href='./assets/css/index.css' type="text/css">
     <link rel="stylesheet" href='./assets/css/bingo.css' type="text/css">
     <link rel="stylesheet" href='./assets/css/modal.css' type="text/css">
+    <link rel="stylesheet" href='./assets/css/buttons.css' type="text/css">
 </head>
 <title>Dark Ostara</title>
 </head>
@@ -30,8 +31,13 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-cog iconcog nav_icon"></i></span>
             </button>
-            <div class="collapse navbar-collapse navIcon" id="navbarNavAltMarkup">
-                <div class="user">User : <span id="user"></span></div>
+            <div class="navbar-collapse navIcon" id="navbarNavAltMarkup">
+                <!-- <a class="user" class="nav-link dropdown-toggle user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">User : <span id="user"></span></a> -->
+                <span class="user">User : </span>
+                <a class=" dropdown-toggle user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="user"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="logout" href="login.html">Log Out</a></li>
+                  </ul>
             </div>
         </div>
         </div>
@@ -68,7 +74,14 @@
                     <div class="cells" id="80s"></div><br>
                 </div>
 
-                <div>
+                <button id="options" class="btn btn-secondary">Audio Options</button>
+                
+                <div id="audio_video_options" class="audio_video_options hide">
+                    <label for="talk_over_level_input">Talk Over Level: </label>
+                    <input id="talk_over_level_input" name="talk_over_level_input" type="range" 
+                    min="0.1" max="1" step="0.1" value="0.5">
+                </div>
+                <div id="audio_video_controls" class="audio_video_controls">
                     <div id="track_selection">
                         <input type="radio" id="track1" name="radio" value="theme" checked />
                         <label for="track1">Theme</label>
@@ -77,8 +90,8 @@
                     </div>
                     <audio id="music" controls></audio>
                     <br>
-                    <input type="button" class="btn btn-success" id="play_button" value="CUE">
-                    <input type="button" class="btn btn-warning" id="replay" value="REPLAY">
+                    <input type="button" class="btn btn-success cue_button" id="play_button" value="PLAY">
+                    <input type="button" class="btn btn-warning replay_button" id="replay" value="REPLAY">
 
                     <button type="button" id="modal_open" class="btn btn-danger dance_button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
@@ -88,6 +101,8 @@
                             class="fa fa-solid fa-rotate-right"></i></button>
                     
                     <button type="button" class="btn btn-secondary" id="end_game_video">End Credits</button>
+                    <input type="button" class="btn btn-secondary" id="talk_over" value="Talk Over">
+                  
                 </div>
 
             </div>
@@ -132,12 +147,12 @@
         </div>
     </div>
 
-
     <script src="./assets/js/video_urls.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/bingo.js"></script>
     <script src="./assets/js/video_modal.js"></script>
     <script src="./assets/js/music.js"></script>
+    <script src="./assets/js/cookie.js"></script>
 </body>
 
 </html>
