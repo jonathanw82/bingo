@@ -55,4 +55,5 @@ if(logout)logout.addEventListener('click', log_out);
 
 function log_out(){
     delFromStorage(consentName);
+    localStorage.removeItem('userName'); 
 }

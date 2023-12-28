@@ -9,7 +9,3 @@ window.onload = (event) => {
     select_track();
     talk_over_level();
 };
-
-let user = document.getElementById("user");
-
-user.innerHTML = "Jon";
