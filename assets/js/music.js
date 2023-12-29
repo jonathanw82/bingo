@@ -5,8 +5,10 @@ let delta_time = document.getElementById("audio_time");
 let elapsed_time= null;
 let track1 = "theme";
 const Track1 = "/assets/Music/theme.mp3";
-let track2 = "winner";
-const Track2 = "/assets/Music/winner.mp3"
+let track2 = "winner-line";
+const Track2 = "/assets/Music/winner_line.mp3"
+let track3 = "winner-house";
+const Track3 = "/assets/Music/winner_house.mp3"
 
 let options_button = document.getElementById("options").addEventListener('click', showoptions);
 function showoptions(){
@@ -45,6 +47,8 @@ function select_track(){
                 music.src = Track1;
             }else if(radio_button[i].value == track2){
                 music.src = Track2;
+            }else if(radio_button[i].value == track3){
+                music.src = Track3;
             }
         }
     }

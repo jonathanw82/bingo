@@ -76,9 +76,6 @@ function refresh_videos(){
 function end_game_modal(action){
     let modal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {});
     modal.show();
-    // if(action == "game_over"){
-    //     modal_content.innerHTML = `<img src="assets/media/gameover.gif" class="game_over">`;
-    // }
     switch(action){
         case "game_over":
             modal_content.innerHTML = `<img src="assets/media/gameover.gif" class="game_over">`;

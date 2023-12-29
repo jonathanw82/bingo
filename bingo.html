@@ -85,8 +85,10 @@
                     <div id="track_selection">
                         <input type="radio" id="track1" name="radio" value="theme" checked />
                         <label for="track1">Theme</label>
-                        <input type="radio" id="track2" name="radio" value="winner" />
-                        <label for="track2">Winner</label>
+                        <input type="radio" id="track2" name="radio" value="winner-line" />
+                        <label for="track2">Winner-line</label>
+                        <input type="radio" id="track3" name="radio" value="winner-house" />
+                        <label for="track3">Winner-house</label>
                     </div>
                     <audio id="music" controls></audio>
                     <br>
@@ -94,8 +96,7 @@
                     <input type="button" class="btn btn-warning replay_button" id="replay" value="REPLAY">
 
                     <button type="button" id="modal_open" class="btn btn-danger dance_button" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Dance </button>
+                        data-bs-target="#staticBackdrop">Dance </button>
                         <br><br>
                     <button type="button" class="btn btn-secondary" id="refresh_videos">Refresh Videos <i
                             class="fa fa-solid fa-rotate-right"></i></button>
@@ -137,7 +138,7 @@
             <div class="modal-dialog modal-size modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div id="model_content" clas="model content">
+                        <div id="model_content" class="model content">
                         </div>
                     </div>
                     <button type="button" id="modla_close" class="btn btn-secondary"

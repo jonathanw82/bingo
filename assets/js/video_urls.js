@@ -12,4 +12,5 @@ const video2_url = "assets/video/video2.mp4";
 const video3_url = "assets/video/video3.mp4";
 const video4_url = "assets/video/video4.mp4";
 const video5_url = "assets/video/video5.mp4";
-const endCredit_vid = "assets/video/end credits.mp4";
+const endCredit_vid = "assets/video/darkending.mp4";
+const darkOstara_start = "assets/video/darkbeginning.mp4";

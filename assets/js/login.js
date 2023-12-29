@@ -1,8 +1,8 @@
 "use strict";
 
-const pass = "Growing2020";
+const pass = "Letmein";
 
-let incorrect = null;
+let login_info = null;
 let password_value = null;
 
 let user = document.getElementById("user_name");
@@ -20,13 +20,17 @@ function getUserName(){
     if(user.value.length == 0){
         login_name.innerHTML = `Please enter a valid User Name`
     }else{
-        user_name = user.value.charAt(0).toUpperCase() + user.value.slice(1);
+        user_name = user.value.charAt(0).toUpperCase() + user.value.slice(1); // give the user name and upper case first letter
 
         if(window.localStorage){
+            // store the user in the local storage to be used site wide
             localStorage['userName'] = user_name;
         }
  
-        login_name.innerHTML = `Hello ${user_name}! <a href="#">Not You?</a>`;
+        login_name.innerHTML = `Hello ${user_name}! <a href="#" id="not_you">Not You?</a>`;
+
+        const not_you = document.getElementById('not_you').addEventListener('click', () => { location.reload();}); // if button prressed reload the page
+
         document.getElementById('user_name_box').classList.add('hide');
         
         document.getElementById('password_box').innerHTML = `<input id="password" type="password" placeholder="Password">
@@ -35,35 +39,35 @@ function getUserName(){
         let submit = document.getElementById("submit");
         submit.addEventListener('click', checkpassword); 
 
-        incorrect = document.getElementById("incorrect");
+        login_info = document.getElementById("login_info");
 
         password_value = document.getElementById('password');
         password_value.addEventListener("click", () => { 
             password_value.value = "";
-            incorrect.innerHTML = "";
+            login_info.innerHTML = "";
         })
     }
 }
 
 function checkpassword(){
-    let no_pass = password_value.value.length;
+    let check_pass = password_value.value.length;
 
-    if(no_pass == 0){
-        incorrect.innerHTML = "Please enter a password";
+    if(check_pass == 0){
+        login_info.innerHTML = "Please enter a password";
         console.log("no pass");
     }
     else if(password_value.value != pass){
-        incorrect.innerHTML = "Password Incorrect ";
+        login_info.innerHTML = "Password Incorrect ";
     }
     else if(password_value.value == pass){
-        incorrect.innerHTML = "Password Correct";
+        login_info.innerHTML = "Password Correct";
         saveToStorage(consentName);
         setTimeout(loggedin, 1000);
     }
 }
 
 function loggedin(){
-    window.location.href = "bingo.html";
+    window.location.href = "entry.html";
 }
 
 document.body.onkeyup = function(e){
