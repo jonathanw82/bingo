@@ -9,6 +9,8 @@ let track2 = "winner-line";
 const Track2 = "/assets/Music/winner_line.mp3"
 let track3 = "winner-house";
 const Track3 = "/assets/Music/winner_house.mp3"
+let track4 = "winner-corners";
+const Track4 = "/assets/Music/winner_4corner.mp3"
 
 let options_button = document.getElementById("options").addEventListener('click', showoptions);
 function showoptions(){
@@ -49,10 +51,15 @@ function select_track(){
         if( radio_button[i].checked ) {
             if(radio_button[i].value == track1){
                 music.src = Track1;
-            }else if(radio_button[i].value == track2){
+            }
+            else if(radio_button[i].value == track2){
                 music.src = Track2;
-            }else if(radio_button[i].value == track3){
+            }
+            else if(radio_button[i].value == track3){
                 music.src = Track3;
+            }
+            else if(radio_button[i].value == track4){
+                music.src = Track4;
             }
         }
     }
