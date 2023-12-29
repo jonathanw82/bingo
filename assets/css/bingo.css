@@ -58,6 +58,15 @@
     margin-left: 20px;
 }
 
+.game_card{
+    margin-top: 10px;
+    width: 25rem;
+}
+
+.game_in_play{
+    font-size: 1.5rem;
+}
+
 .game_over{
     position: absolute;
     top: 50%;

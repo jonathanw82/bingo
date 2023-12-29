@@ -130,6 +130,18 @@
                     <option value=15000>15 seconds</option>
                 </select>
                 <div id="timer_dispalay">Next Number In: <span class="count_down" id="count_down">0</span></div>
+                <div id="game_controls" class="game_controls">
+                        <div id="game_selection">
+                            <input type="radio" id="line_game" name="game_radio" value="line" checked />
+                            <label for="line">Line</label>
+                            <input type="radio" id="house_game" name="game_radio" value="house" />
+                            <label for="house">House</label>
+                            <input type="radio" id="corners_game" name="game_radio" value="corners" />
+                            <label for="corners">4 Corners</label>
+                        </div>
+                    </div>
+                    <div class="game_in_play">Game in Play = <span id="game_in_play"></span></div>
+                <div id="display_card"></div>
             </div>
         </div>
         <!-- Modal -->

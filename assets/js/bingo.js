@@ -38,6 +38,28 @@ function generate_number(mode){
     isManual = false;
 }
 
+let game_selection = document.getElementById("game_selection").addEventListener('click', select_game);
+let game_in_play = document.getElementById("game_in_play");
+function select_game(){
+   let game_button = document.getElementsByName("game_radio");
+   let display_card = document.getElementById('display_card');
+    for(let i = 0; i < game_button.length; i++ ) {
+        if( game_button[i].checked ) {
+            if(game_button[i].value == "line"){
+                game_in_play.innerHTML = `<strong>Line Game</strong>`;
+                display_card.innerHTML = `<img class="game_card" src="assets/media/linecard.png" alt="line card">`;
+            }else if(game_button[i].value == "house"){
+                game_in_play.innerHTML = `<strong>House Game</strong>`;
+                display_card.innerHTML = `<img class="game_card" src="assets/media/housecard.png" alt="house card">`;
+            }
+            else if(game_button[i].value == "corners"){
+                game_in_play.innerHTML = `<strong>4 Corners</strong>`;
+                display_card.innerHTML = `<img class="game_card" src="assets/media/4corners.png" alt="corners card">`;
+            }
+        }
+    }
+}
+
 const reset_button = document.getElementById("reset_button").addEventListener("click", reset_page);
 function reset_page(){
     // reset the page to start a new game
