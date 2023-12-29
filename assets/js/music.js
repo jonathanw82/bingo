@@ -12,6 +12,7 @@ const Track3 = "/assets/Music/winner_house.mp3"
 
 let options_button = document.getElementById("options").addEventListener('click', showoptions);
 function showoptions(){
+    // show or hide the ausio options menu
     document.getElementById("audio_video_controls").classList.toggle("hide");
     document.getElementById("audio_video_options").classList.toggle("hide");
 }
@@ -19,6 +20,7 @@ function showoptions(){
 let play_button = document.getElementById("play_button");
 play_button.addEventListener('click', play_audio);
 function play_audio() {
+    // check to see if audio is playing or paused
     if(music.paused){
         music.play();
         play_button.value = "PAUSE";
@@ -32,6 +34,7 @@ function play_audio() {
 
 let replay = document.getElementById("replay").addEventListener('click', replay_audio);
 function replay_audio(){
+    // replay current playing audio
     clearInterval(elapsed_time);
     music.currentTime = 0;
     music.play();  
@@ -40,6 +43,7 @@ function replay_audio(){
 
 let track_selection = document.getElementById("track_selection").addEventListener('click', select_track);
 function select_track(){
+    // track selction from the radio buttons
    let radio_button = document.getElementsByName("radio");
     for(let i = 0; i < radio_button.length; i++ ) {
         if( radio_button[i].checked ) {
@@ -58,6 +62,7 @@ let talk_over_vol = 0;
 let talk_over_level_input = document.getElementById("talk_over_level_input");
 talk_over_level_input.addEventListener('click', talk_over_level);
 function talk_over_level(){
+    // talk over feature for audio incase of mixer failure
     talk_over_vol = talk_over_level_input.value;
     console.log(talk_over_vol);
 }
@@ -65,6 +70,7 @@ function talk_over_level(){
 let talk_over_button = document.getElementById("talk_over");
 talk_over_button.addEventListener("click", talk_over_click);
 function talk_over_click(){
+    // talk over button state
     talk_over_button.value = "active"
     if(music.volume == 1){
         music.volume = talk_over_vol;

@@ -41,6 +41,7 @@ function generate_number(mode){
 let game_selection = document.getElementById("game_selection").addEventListener('click', select_game);
 let game_in_play = document.getElementById("game_in_play");
 function select_game(){
+    // Display current game
    let game_button = document.getElementsByName("game_radio");
    let display_card = document.getElementById('display_card');
     for(let i = 0; i < game_button.length; i++ ) {
@@ -48,7 +49,8 @@ function select_game(){
             if(game_button[i].value == "line"){
                 game_in_play.innerHTML = `<strong>Line Game</strong>`;
                 display_card.innerHTML = `<img class="game_card" src="assets/media/linecard.png" alt="line card">`;
-            }else if(game_button[i].value == "house"){
+            }
+            else if(game_button[i].value == "house"){
                 game_in_play.innerHTML = `<strong>House Game</strong>`;
                 display_card.innerHTML = `<img class="game_card" src="assets/media/housecard.png" alt="house card">`;
             }

@@ -7,6 +7,7 @@ window.onload = (event) => {
 const modal_content = document.getElementById('model_content');
 let modal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {});
 function startGame(){
+    // Auto show modal and enrty video
     modal.show();
     modal_content.innerHTML = `<video class="video_size" id="video">
                                     <source src="${darkOstara_start}" type="video/mp4"></video>`;
