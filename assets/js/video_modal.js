@@ -74,7 +74,7 @@ function refresh_videos(){
     dance_counter = 0; // reset the dance counter for next game
     videoRemaining();
     modal_open.classList.remove('hide'); // show the dance button again
-    modal_open.classList.add('show1');
+    modal_open.classList.add('show_inline');
 }
 
 function end_game_modal(action){
@@ -96,12 +96,12 @@ function videoRemaining(){
     // display number of remaining videos
     let total_video = document.getElementById('total_video');
     let video_remaining = document.getElementById('video_remaining');
-    total_video.innerHTML = video_url.length -1;
     let total = (video_url.length -1) - video_array.length;
+    total_video.innerHTML = video_url.length -1;
     video_remaining.innerHTML = total;
 
     if(total == 0){
-        modal_open.classList.add('hide'); // remove the dance button
-        modal_open.classList.remove('show1');
+        modal_open.classList.add('hide'); // remove the dance button if no videos let to play
+        modal_open.classList.remove('show_inline');
     }
 }
