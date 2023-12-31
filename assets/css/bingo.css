@@ -29,6 +29,10 @@
     display: none;
 }
 
+.show1{
+    display: inline;
+}
+
 .rounded-corners{
     border-spacing: 0;
     border-collapse: separate;

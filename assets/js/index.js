@@ -9,4 +9,5 @@ window.onload = (event) => {
     select_track();
     select_game();
     talk_over_level();
+    videoRemaining();
 };
