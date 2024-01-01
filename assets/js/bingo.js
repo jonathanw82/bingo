@@ -3,6 +3,8 @@
 const min_game_numbers = 1;
 const max_game_numbers = 90;  
 
+let auto_mode;
+let auto_count_down;
 const count_down = document.getElementById("count_down");
 let number_array = [];  // array to store called numbers
 const new_number = document.getElementById("new_number"); // new_number disaplats the current number
@@ -12,55 +14,32 @@ call_button.addEventListener("click", () => game_status("manual"));
 
 let isManual = false;
 function generate_number(mode){
-
     if(mode == "manual"){
         isManual = true; // if maual button is clicked dont start the clock else start the clock
         clearInterval(auto_mode);
         counter("clear");
     }
+    else if (mode == "re_gen"){}
     else counter("start");
 
     let number = Math.floor(Math.random() * (max_game_numbers - min_game_numbers + 1)) + min_game_numbers; // generate a number betweeen 1 and 90 including 1 and 90
 
     if(!number_array.includes(number)){
+        console.log('generated number = ' + number);
         number_array.push(number);
         new_number.innerHTML = number < 10 ? "&nbsp" + number:number;
         let cell = document.getElementById(number);
         cell.classList.toggle("picked");
     }else{
         if(number_array.length < max_game_numbers){
-            if(!isManual)generate_number();
-            else generate_number("manual");
+            console.log('regerate number');
+            generate_number("re_gen");
         }else{
             end_game_modal("game_over");
+            counter("clear");
         }
     }
     isManual = false;
-}
-
-let game_selection = document.getElementById("game_selection").addEventListener('click', select_game);
-let game_in_play = document.getElementById("game_in_play");
-function select_game(){
-    // Display current game
-   let game_button = document.getElementsByName("game_radio");
-   let display_card = document.getElementById('display_card');
-    for(let i = 0; i < game_button.length; i++ ) {
-        if( game_button[i].checked ) {
-            if(game_button[i].value == "line"){
-                game_in_play.innerHTML = `<strong>Line Game</strong>`;
-                display_card.innerHTML = `<img class="game_card" src="assets/media/linecard.png" alt="line card">`;
-            }
-            else if(game_button[i].value == "house"){
-                game_in_play.innerHTML = `<strong>House Game</strong>`;
-                display_card.innerHTML = `<img class="game_card" src="assets/media/housecard.png" alt="house card">`;
-            }
-            else if(game_button[i].value == "corners"){
-                game_in_play.innerHTML = `<strong>4 Corners</strong>`;
-                display_card.innerHTML = `<img class="game_card top_image" src="assets/media/4corners.png" alt="corners card">
-                <img class="game_card bottom_image" src="assets/media/4cornersalt.png" alt="corners card alt">`;
-            }
-        }
-    }
 }
 
 const reset_button = document.getElementById("reset_button").addEventListener("click", reset_page);
@@ -109,9 +88,9 @@ function generate_called_number_table(action){
 const auto_call = document.getElementById("auto_button").addEventListener("click", auto_gernerate_number);
 const timer_dispalay = document.getElementById("timer_dispalay");
 const game_speed = document.getElementById("speed");
-let auto_mode = 0;
 function auto_gernerate_number(){
     // starts the auto function
+    console.log('Auto generate');
     game_status("auto");
     auto_mode = setInterval(generate_number, game_speed.value);
     counter("start");
@@ -122,8 +101,50 @@ const auto_stop = document.getElementById("auto_pause_button").addEventListener(
 function game_pause(){
     // Pauses the auto function
     game_status("pause");
-    clearInterval(auto_mode);
     counter("clear");
+    console.log('--------------------');
+    console.log('Game Paused');
+    console.log('timer = ' + timer);
+    console.log(auto_mode);
+    console.log('--------------------');
+}
+
+let timer = 0;
+function counter(action){
+    // start or stop the auto number caller count down
+    console.log('counter has been called = ' + action );
+    if(action == "start"){
+        clearInterval(auto_count_down);
+        console.log("start clock");
+        timer = game_speed.value / 1000;
+        auto_count_down = setInterval(function(){
+            timer-=1;
+            console.log(timer);
+            count_down.innerHTML = timer;
+        }, 1000);
+    }
+    else if(action == "clear"){
+        clearInterval(auto_mode);
+        auto_mode = false;
+        clearInterval(auto_count_down);
+        timer = 0;
+        count_down.innerHTML = "0";
+    }
+}
+
+let isPaused = false;
+document.body.onkeyup = function(e){
+    // on press of the spacebar either pause the game or auto start the game
+    if(e.keyCode == 32){   
+        e.preventDefault();
+        if(isPaused == false){
+           game_pause(); 
+           isPaused = true;
+        }else{
+            isPaused = false;
+            auto_gernerate_number();
+        }     
+    }
 }
 
 const display_status = document.getElementById("status");
@@ -141,39 +162,28 @@ function game_status(status){
         break;
     }
 }
- 
-let auto_count_down = 0;
-let timer = 0;
-function counter(action){
-    // start or stop the auto number caller count down
-    if(action == "start"){
-        clearInterval(auto_count_down);
-        console.log("start clock");
-        timer = game_speed.value / 1000;
-        auto_count_down = setInterval(function(){
-            timer-=1;
-            console.log(timer);
-            count_down.innerHTML = timer;
-        }, 1000);
-    }
-    else if(action == "clear"){
-        clearInterval(auto_count_down);
-        timer = 0
-        count_down.innerHTML = "0";
-    }
-}
 
-let isPaused = false;
-document.body.onkeyup = function(e){
-    // on press of the spacebar either pause the game or auto start the game
-    if(e.keyCode == 32){   
-        e.preventDefault();
-        if(isPaused == false){
-           game_pause(); 
-           isPaused = true;
-        }else{
-            isPaused = false;
-            auto_gernerate_number();
-        }     
+let game_selection = document.getElementById("game_selection").addEventListener('click', select_game);
+let game_in_play = document.getElementById("game_in_play");
+function select_game(){
+    // Display current game
+   let game_button = document.getElementsByName("game_radio");
+   let display_card = document.getElementById('display_card');
+    for(let i = 0; i < game_button.length; i++ ) {
+        if( game_button[i].checked ) {
+            if(game_button[i].value == "line"){
+                game_in_play.innerHTML = `<strong>Line Game</strong>`;
+                display_card.innerHTML = `<img class="game_card" src="assets/media/linecard.png" alt="line card">`;
+            }
+            else if(game_button[i].value == "house"){
+                game_in_play.innerHTML = `<strong>House Game</strong>`;
+                display_card.innerHTML = `<img class="game_card" src="assets/media/housecard.png" alt="house card">`;
+            }
+            else if(game_button[i].value == "corners"){
+                game_in_play.innerHTML = `<strong>4 Corners</strong>`;
+                display_card.innerHTML = `<img class="game_card top_image" src="assets/media/4corners.png" alt="corners card">
+                <img class="game_card bottom_image" src="assets/media/4cornersalt.png" alt="corners card alt">`;
+            }
+        }
     }
 }

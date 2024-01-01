@@ -71,7 +71,6 @@ talk_over_level_input.addEventListener('click', talk_over_level);
 function talk_over_level(){
     // talk over feature for audio incase of mixer failure
     talk_over_vol = talk_over_level_input.value;
-    console.log(talk_over_vol);
 }
 
 let talk_over_button = document.getElementById("talk_over");
