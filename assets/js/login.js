@@ -6,6 +6,7 @@ let login_info = null;
 let password_value = null;
 
 let user = document.getElementById("user_name");
+user.focus();
 user.addEventListener('click', clearBox);
 
 function clearBox(){
@@ -29,7 +30,7 @@ function getUserName(){
             localStorage['userName'] = user_name;
         }
  
-        login_name.innerHTML = `Hello ${user_name}! <a href="#" id="not_you">Not You?</a>`;
+        login_name.innerHTML = `Hello ${user_name}! <a href="#" id="not_you"> Not You?</a>`;
 
         const not_you = document.getElementById('not_you').addEventListener('click', () => { location.reload();}); // if button pressed reload the page
 
@@ -49,6 +50,7 @@ function getUserName(){
 
         // when you click on the password box it clears any prevoiuse data 
         password_value = document.getElementById('password');
+        password_value.focus();
         password_value.addEventListener("click", () => { 
             password_value.value = "";
             login_info.innerHTML = "";

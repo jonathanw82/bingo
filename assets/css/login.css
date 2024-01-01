@@ -27,6 +27,7 @@ body {
 
 .login_name{
     color: white;
+    padding-top: 10px;
 }
 
 #user_name{

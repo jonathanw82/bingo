@@ -56,7 +56,8 @@ function select_game(){
             }
             else if(game_button[i].value == "corners"){
                 game_in_play.innerHTML = `<strong>4 Corners</strong>`;
-                display_card.innerHTML = `<img class="game_card" src="assets/media/4corners.png" alt="corners card">`;
+                display_card.innerHTML = `<img class="game_card top_image" src="assets/media/4corners.png" alt="corners card">
+                <img class="game_card bottom_image" src="assets/media/4cornersalt.png" alt="corners card alt">`;
             }
         }
     }
