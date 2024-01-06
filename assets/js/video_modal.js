@@ -83,11 +83,13 @@ function end_game_modal(action){
     switch(action){
         case "game_over":
             modal_content.innerHTML = `<img src="assets/media/gameover.gif" class="game_over">`;
+            game_pause();
         break;
         case "end_credit":
             modal_content.innerHTML = `<video class="video_size" id="video">
                                             <source src="${endCredit_vid}" type="video/mp4"></video>`;
             check_video_for_play();
+            game_pause();
         break;
     }
 }

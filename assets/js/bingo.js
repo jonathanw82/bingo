@@ -125,7 +125,7 @@ function counter(action){
     }
     else if(action == "clear"){
         clearInterval(auto_mode);
-        auto_mode = false;
+        auto_mode = false; // to catch overrun state
         clearInterval(auto_count_down);
         timer = 0;
         count_down.innerHTML = "0";
