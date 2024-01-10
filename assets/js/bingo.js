@@ -30,6 +30,7 @@ function generate_number(mode){
         new_number.innerHTML = number < 10 ? "&nbsp" + number:number;
         let cell = document.getElementById(number);
         cell.classList.toggle("picked");
+        last_called_numbers(number);
     }else{
         if(number_array.length < max_game_numbers){
             console.log('regerate number');
@@ -57,6 +58,7 @@ function reset_page(){
     while (number_array.length > 0){
         number_array.pop();
     }
+    last_called_numbers('','reset');
 }
 
 const rowZero = document.getElementById("zeros");
@@ -185,5 +187,25 @@ function select_game(){
                 <img class="game_card bottom_image" src="assets/media/4cornersalt.png" alt="corners card alt">`;
             }
         }
+    }
+}
+
+let last_called_array = [];
+let last_5 = document.getElementById('last_5');
+function last_called_numbers(action, reset){
+    
+    last_called_array.push(action);
+
+    if(last_called_array.length > 5){
+        last_called_array.shift();
+    }
+    last_5.innerHTML = last_called_array.join(' ');
+
+    if(reset == 'reset'){
+        console.log('here')
+        while (last_called_array.length > 0){
+            last_called_array.pop();
+        }
+        last_5.innerHTML = '';
     }
 }
