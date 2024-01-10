@@ -193,16 +193,17 @@ function select_game(){
 let last_called_array = [];
 let last_5 = document.getElementById('last_5');
 function last_called_numbers(action, reset){
-    
+    // last 5 called numbers
     last_called_array.push(action);
 
     if(last_called_array.length > 5){
         last_called_array.shift();
     }
-    last_5.innerHTML = last_called_array.join(' ');
+
+    let show_last_number = last_called_array.slice(0, -1);
+    last_5.innerHTML = show_last_number.join(' ');
 
     if(reset == 'reset'){
-        console.log('here')
         while (last_called_array.length > 0){
             last_called_array.pop();
         }

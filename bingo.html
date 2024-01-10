@@ -100,41 +100,41 @@
                     <input type="button" class="btn btn-warning replay_button" id="replay" value="REPLAY">
 
                     <button type="button" id="modal_open" class="btn btn-danger dance_button" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">Dance </button>
-                        <br><br>
+                    data-bs-target="#staticBackdrop">Dance </button>
+                    <br><br>
                     <button type="button" class="btn btn-secondary" id="refresh_videos">Refresh Videos <i
-                            class="fa fa-solid fa-rotate-right"></i></button>
-                    
-                    <button type="button" class="btn btn-secondary" id="end_game_video">End Credits</button>
-                    <input type="button" class="btn btn-secondary" id="talk_over" value="Talk Over">
-                  
-                </div>
-
-            </div>
-            <div class="col">
-                <!-- New number generated here -->
-                <div class="new_number" id="new_number"></div>
-                <div id="last_5"></div>
-                <div id="status"></div>
-                <button id="call_button" class="btn-secondary">Call <i class="fa fa-solid fa-play"></i></button>
-                <button id="auto_button" class="btn-secondary">Auto <i class="fa fa-solid fa-forward"></i></button>
-                <button id="auto_pause_button" class="btn-secondary">Pause <i class="fa fa-solid fa-pause"></i></button>
-                <button id="reset_button" class="btn-secondary">Refresh <i
                         class="fa fa-solid fa-rotate-right"></i></button>
-                <br>
-                <br>
-                <label for="speed">Auto Game Speed: </label>
-                <select name="speed" id="speed">
-                    <option value=4000>4 seconds</option>
-                    <option value=5000>5 seconds</option>
-                    <option value=6000>6 seconds</option>
-                    <option value=7000>7 seconds</option>
-                    <option value=8000>8 seconds</option>
-                    <option value=10000>10 seconds</option>
-                    <option value=12000>12 seconds</option>
-                    <option value=15000>15 seconds</option>
-                </select>
-                <div id="timer_dispalay">Next Number In: <span class="count_down" id="count_down">0</span></div>
+                        
+                        <button type="button" class="btn btn-secondary" id="end_game_video">End Credits</button>
+                        <input type="button" class="btn btn-secondary" id="talk_over" value="Talk Over">
+                        
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <!-- New number generated here -->
+                    <div class="new_number" id="new_number"></div>
+                    <div>Last Called Numbers: <span class="last_5" id="last_5"></span></div>
+                    <div id="status"></div>
+                    <button id="call_button" class="btn-secondary">Call <i class="fa fa-solid fa-play"></i></button>
+                    <button id="auto_button" class="btn-secondary">Auto <i class="fa fa-solid fa-forward"></i></button>
+                    <button id="auto_pause_button" class="btn-secondary">Pause <i class="fa fa-solid fa-pause"></i></button>
+                    <button id="reset_button" class="btn-secondary">Refresh <i
+                        class="fa fa-solid fa-rotate-right"></i></button>
+                        <br>
+                        <br>
+                    <label for="speed">Auto Game Speed: </label>
+                    <select name="speed" id="speed">
+                        <option value=4000>4 seconds</option>
+                        <option value=5000>5 seconds</option>
+                        <option value=6000>6 seconds</option>
+                        <option value=7000>7 seconds</option>
+                        <option value=8000>8 seconds</option>
+                        <option value=10000>10 seconds</option>
+                        <option value=12000>12 seconds</option>
+                        <option value=15000>15 seconds</option>
+                    </select>
+                    <div id="timer_dispalay">Next Number In: <span class="count_down" id="count_down">0</span></div>
                 <div id="game_controls" class="game_controls">
                         <div id="game_selection">
                             <input type="radio" id="line_game" name="game_radio" value="line" checked />

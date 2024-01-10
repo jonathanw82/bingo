@@ -9,10 +9,16 @@
 }
 
 .new_number{
-    margin-top: -100px;
+    margin-top: -80px;
     font-size: 20rem;
     color: black;
     text-shadow: 10px 10px 20px gray;
+    margin-bottom: -45px;
+}
+
+.last_5{
+    color: black;
+    font-weight: 600;
 }
 
 .count_down{
