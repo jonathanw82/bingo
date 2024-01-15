@@ -17,6 +17,20 @@ body {
     }
 }
 
+.location{
+    float: inline-end;
+    padding-right: 10px;
+    color: white;
+}
+
+.version{
+    padding-left: 10px;
+    margin-top: 10px;
+    color: white;
+    font-family:"Roboto", sans-serif;
+    font-weight: 500;
+}
+
 .show{
     display: block;
 }
