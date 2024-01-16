@@ -22,6 +22,10 @@ body {
     color: white;
 }
 
+.dot{
+    padding-right: 5px;
+}
+
 .version{
     padding-left: 10px;
     margin-top: 10px;
