@@ -90,13 +90,19 @@ function generate_called_number_table(action){
 const auto_call = document.getElementById("auto_button").addEventListener("click", auto_gernerate_number);
 const timer_dispalay = document.getElementById("timer_dispalay");
 const game_speed = document.getElementById("speed");
+let already_running = false;
 function auto_gernerate_number(){
     // starts the auto function
-    console.log('Auto generate');
-    game_status("auto");
-    auto_mode = setInterval(generate_number, game_speed.value);
-    counter("start");
-    console.log(game_speed.value);
+    if(!already_running){
+        console.log('Auto generate');
+        game_status("auto");
+        auto_mode = setInterval(generate_number, game_speed.value);
+        counter("start");
+        console.log(game_speed.value);
+        already_running = true;
+    }else{
+        console.log("Already running!");
+    }
 }
 
 const auto_stop = document.getElementById("auto_pause_button").addEventListener("click", game_pause);
@@ -131,6 +137,7 @@ function counter(action){
         clearInterval(auto_count_down);
         timer = 0;
         count_down.innerHTML = "0";
+        already_running = false;
     }
 }
 
