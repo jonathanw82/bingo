@@ -104,10 +104,10 @@ function game_pause(){
     // Pauses the auto function
     game_status("pause");
     counter("clear");
-    console.log('--------------------');
+    console.info('--------------------');
     console.log('Game Paused');
     console.log('timer = ' + timer);
-    console.log(auto_mode);
+    console.log('Auto mode = ' + auto_mode);
     console.log('--------------------');
 }
 
