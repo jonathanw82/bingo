@@ -1,5 +1,4 @@
 body {
-    /* background-image: linear-gradient(darkred, green); */
     background: linear-gradient(-45deg, darkred, green);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -15,6 +14,24 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.location{
+    float: inline-end;
+    padding-right: 10px;
+    color: white;
+}
+
+.dot{
+    padding-right: 5px;
+}
+
+.version{
+    padding-left: 10px;
+    margin-top: 10px;
+    color: white;
+    font-family:"Roboto", sans-serif;
+    font-weight: 500;
 }
 
 .show{
