@@ -1,0 +1,10 @@
+const call_array = [" ","Kelly's eye", "One little duck", "You and me", "Knock at the door", "Man alive", "Tom’s tricks", "God’s in heaven","Garden gate",
+"Doctor’s orders", "Kevins den", "legs eleven", "one dozen", "Unlucky for some", "Valentine’s Day", "Young and keen", "Sweet sixteen", "Dancing queen", "Coming of age",
+"Goodbye teens", "Getting plenty", "Key of the door", "Two little ducks", "Thee and me", "Two dozen", "Duck and dive", "Pick and mix", "Gateway to heaven", "In a state",
+"Rise and shine", "Dirty Gertie", "Get up and run", "Buckle my shoe", "Dirty knees", "Ask for more", "Jump and jive", "Three dozen", "A flea in heaven", "Christmas cake",
+"Those famous steps", "Naughty forty", "Time for fun", "Winny the Pooh", "Down on your knees", "Droopy drawers", "Halfway there", "Up to tricks", "Four and seven", "Four dozen", 
+"Nick nick", "Blind 50", "Tweak of the thumb", "Weeks in a year", "Stuck in the tree", "Clean the floor", "Snakes alive", "Was she worth it?", "Heinz varieties", "Make them wait", 
+"Brighton line", "Blind 60 ", "Bakers bun", "Tickety boo", "Tickle me", "Red raw", "Old age pension", "Clickety click", "Made in heaven", "Saving grace", "Your place or mine", 
+"Blind 70", "Bang on the drum", "A crutch and a duck", "Queen bee", "Hit the floor", "Strive and strive", "Trombones", "Sunset strip", "Heaven’s gate", "One more time", 
+"Gandhi’s breakfast", "Stop and run", "Straight on through", "Time for tea", "Seven dozen", "Staying alive", "Between the sticks", "Torquay in Devon", "Two big jellys", 
+"Nearly there", "Top of the shop"];

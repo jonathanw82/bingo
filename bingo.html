@@ -81,6 +81,11 @@
                     <label for="talk_over_level_input">Talk Over Level: </label>
                     <input id="talk_over_level_input" name="talk_over_level_input" type="range" 
                     min="0.1" max="1" step="0.1" value="0.5">
+                    <br>
+                    <label for="allow_lingo">Bingo Lingo Calls:</label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="allow_lingo">
+                    </div>
                 </div>
                 <div id="audio_video_controls" class="audio_video_controls">
 
@@ -114,6 +119,7 @@
                 <div class="col">
                     <!-- New number generated here -->
                     <div class="new_number" id="new_number"></div>
+                    <div class="lingo" id="lingo"></div>
                     <div>Last Called Numbers: <span class="last_5" id="last_5"></span></div>
                     <div id="status"></div>
                     <button id="call_button" class="btn-secondary">Call <i class="fa fa-solid fa-play"></i></button>
@@ -172,6 +178,7 @@
     <script src="./assets/js/video_modal.js"></script>
     <script src="./assets/js/music.js"></script>
     <script src="./assets/js/user_name.js"></script>
+    <script src="./assets/js/lingo.js"></script>
 </body>
 
 </html>

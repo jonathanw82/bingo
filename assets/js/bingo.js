@@ -9,6 +9,7 @@ const count_down = document.getElementById("count_down");
 let number_array = [];  // array to store called numbers
 const new_number = document.getElementById("new_number"); // new_number disaplats the current number
 const call_button = document.getElementById("call_button");
+const disaplay_lingo = document.getElementById("lingo");
 call_button.addEventListener("click", () => generate_number("manual"));
 call_button.addEventListener("click", () => game_status("manual"));
 
@@ -30,6 +31,7 @@ function generate_number(mode){
         new_number.innerHTML = number < 10 ? "&nbsp" + number:number;
         let cell = document.getElementById(number);
         cell.classList.toggle("picked");
+        lingo_calls(number);
         last_called_numbers(number);
     }else{
         if(number_array.length < max_game_numbers){
@@ -49,6 +51,7 @@ function reset_page(){
     counter("clear");
     clearInterval(auto_mode);
     new_number.innerHTML = 0;
+    disaplay_lingo.innerHTML = "";
     // toggle all css on each called number back to its original value
     for(let i = 0; i < number_array.length; i++){
         let cell = document.getElementById(number_array[i]);
@@ -215,5 +218,22 @@ function last_called_numbers(action, reset){
             last_called_array.pop();
         }
         last_5.innerHTML = '';
+    }
+}
+
+let allow_calls = false;
+function lingo_calls(number){
+    let allow_bingo_calls = document.getElementById("allow_lingo");
+    
+    if(allow_bingo_calls.checked){
+        allow_calls = true;
+    }else{
+        allow_calls = false;
+    }
+
+    if(allow_calls){
+        disaplay_lingo.innerHTML = call_array[number];
+    }else{
+        disaplay_lingo.innerHTML = " ";
     }
 }
