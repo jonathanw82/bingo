@@ -8,7 +8,7 @@ Her sole purpose is to get participants to recreate 70s disco dance moves that c
 The bingo side is like any usual game with line, house and 4 corner games.
 
 ### How to run the game!
-The compare logs into the dashboard, using the correct credentials. Shortly after a video starts and Dark Ostara introduces herself and explains how the game works. You will then be redirected to the main dashboard where the Bingo engine can be found. after the dance buttonhas been pressed a video will pop up with dace moves and music, press the close button at the bottom of the screen when the video ends.
+The compare logs into the dashboard, using the correct credentials. Shortly after a video starts and Dark Ostara introduces herself and explains how the game works. You will then be redirected to the main dashboard where the Bingo engine can be found. After the dance buttonhas been pressed a video will pop up with dance moves and music, press the close button at the bottom of the screen when the video ends.
 
 After all 5 dance videos have been played and all bingo games are played the compare can then press the end credit button where a video will start and Dark Ostara will close the games and a video with credits will show. This is the end of the game simply logout for the next user. 
 
@@ -30,6 +30,7 @@ Hitting the space bar at any time will pause the game and stop the auto number g
 * A timer to display when the next auto number will be generated 
 * A game Selector
 * A visual representation of the game in play 
+* Cheesy Bingo lingo calls
 
 ## Audio Video
 
