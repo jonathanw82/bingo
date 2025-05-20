@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img src="https://github.com/jonathanw82/bingo/blob/main/assets/media/logo.jpeg" width="40%" height="auto" alt="logo"/>
+   <img src="https://github.com/jonathanw82/bingo/blob/main/assets/media/logo.jpeg" width="50%" height="auto" alt="logo"/>
  </h1>
 
 # Disco Bingo
