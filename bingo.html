@@ -19,21 +19,19 @@
     <link rel="stylesheet" href='./assets/css/modal.css' type="text/css">
     <link rel="stylesheet" href='./assets/css/buttons.css' type="text/css">
 </head>
-<title>Dark Ostara</title>
+<title>Disco Bingo</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid logobox">
-            <img class="navBarLogo" src="assets/media/ostaralogo.png" alt="LettUsGrow logo">
-            <a class="navbar-brand logo_name" href="#">Dark Ostara's Disco Bingo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-cog iconcog nav_icon"></i></span>
             </button>
             <div class="navbar-collapse navIcon" id="navbarNavAltMarkup">
                 <!-- <a class="user" class="nav-link dropdown-toggle user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">User : <span id="user"></span></a> -->
-                <span class="user">User :</span><span class="user" id="display_user"></span>
+                <span class="user">Caller  :</span><span class="user" id="display_user"></span>
                 <a class=" dropdown-toggle user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="user"></span></a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" id="logout" href="login.html">Log Out</a></li>
@@ -46,23 +44,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 col-sm-1 settings_col">
-                <i class="fas fa-home homelogofirst"><span class="homelogotext">Home</span></i>
-                <p class="col_headings">operations</p>
-                <p><i class="fas fa-calendar-check homelogo"></i><span class="homelogotext">Crop Logger</span></p>
-                <p><i class="fas fa-file-alt homelogo"></i><span span class="homelogotext">Documents</span></p>
-                <p><i class="fas fa-weight homelogo"></i><span span class="homelogotext">Harvests</span></p>
-                <p class="col_headings">l i f e</p>
-                <p><i class="fas fa-book homelogo"></i><span span class="homelogotext">Growing</span></p>
-                <p><i class="fa fa-brands fa-pagelines homelogo"></i><span span class="homelogotext">Crops</span></p>
-                <p><i class="fas fa-flask homelogo"></i><span span class="homelogotext">L.I.F.E</span></p>
-                <p class="col_headings">control</p>
-                <p><i class="fas fa-tachometer-alt homelogo"></i><span span class="homelogotext">Chambers</span></p>
-                <p><i class="fas fa-layer-group homelogo"></i><span span class="homelogotext">Beds</span></p>
-                <p><i class="fas fa-solid fa-water homelogo"></i><span span class="homelogotext">Reservoirs</span></p>
-                <p><i class="fas fa-solid fa-wind homelogo"></i><span span class="homelogotext">HVACs</span></p>
-                <p>Video Total = <span id="total_video"></span><br>Remaining = <strong><span id="video_remaining"></span></strong></p>
+                <a class="brand" href="#">Disco Bingo</a>
+                <p class="video-totals">Video Total = <span id="total_video"></span><br>Remaining = <strong><span id="video_remaining"></span></strong></p>
             </div>
-            <div class="col">
+            <div class="col numbers-table">
                 <div id="table">
                     <div class="cells" id="zeros"></div><br>
                     <div class="cells" id="10s"></div><br>
@@ -131,6 +116,7 @@
                         <br>
                     <label for="speed">Auto Game Speed: </label>
                     <select name="speed" id="speed">
+                        <option value=2000>2 seconds</option>
                         <option value=4000>4 seconds</option>
                         <option value=5000>5 seconds</option>
                         <option value=6000>6 seconds</option>

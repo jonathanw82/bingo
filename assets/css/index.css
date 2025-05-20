@@ -1,3 +1,8 @@
+@font-face{
+    font-family:'summer';
+    src:url('../fonts/SummerFavourite-ARLr6.ttf');
+}
+
 
 /*~~~~~~~~~~~~~~~~~~~~ Body and general Settings ~~~~~~~~~~~~~~~~~~~*/
 body{
@@ -16,8 +21,6 @@ body{
 .hide{
     display: none;
 }
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navigation  ~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .navbar{
     background-color: black;
@@ -72,20 +75,40 @@ body{
     cursor: pointer;
 }
 
-.logo_name{
-    font-family: Arial, sans-serif;
-    font-size: 1.25rem;
-    color: #ffff;
-    font-weight: 600;
-    padding-left: 10px;
+.brand{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 3.5rem;
+    font-family: "summer";
+    --color-start: #ff00ff; /* Electric Pink */
+    --color-mid: #00ff00;   /* Neon Green */
+    --color-end: #ffff00;   /* Electric Yellow */
+    --color-second: #ff007f; /* Hot Pink */
+    --color-third: #00ccff;   /* Sky Blue */
+    animation: color-change 5s linear infinite;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scaleX(2); 
 }
 
-.navbar-brand{
-    color: white;
+@keyframes color-change {
+  0%   { color: var(--color-start); }
+  25%  { color: var(--color-second); }
+  50%  { color: var(--color-mid);   }
+  75%  { color: var(--color-third); }
+  100% { color: var(--color-end);   }
 }
 
-.navbar-brand:hover{
+.video-totals{
     color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.numbers-table{
+    padding-left: 20px;
 }
 
 .homelogofirst{
@@ -101,12 +124,13 @@ body{
 }
 
 .settings_col{
-    width: 12%;
+    width: 10%;
     border: 2px solid #0000;
     background-color: #f5f5f5f5;
-    height: calc(100vh - 60px);
-    box-shadow:1px 1px 1px lightgrey;
+    height: calc(100vh - 40px);
+    /* box-shadow:1px 1px 1px lightgrey; */
     margin: 0px!important;
+    background-color: black;
 }
 
 .col_headings{

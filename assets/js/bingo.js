@@ -108,6 +108,11 @@ function auto_gernerate_number(){
     }
 }
 
+const foo = document.getElementById("speed").addEventListener("click", check_counter_status);
+function check_counter_status(){
+    game_pause();
+}
+
 const auto_stop = document.getElementById("auto_pause_button").addEventListener("click", game_pause);
 function game_pause(){
     // Pauses the auto function
@@ -124,12 +129,14 @@ let timer = 0;
 function counter(action){
     // start or stop the auto number caller count down
     console.log('counter has been called = ' + action );
+
     if(action == "start"){
         clearInterval(auto_count_down);
         console.log("start clock");
         timer = game_speed.value / 1000;
         auto_count_down = setInterval(function(){
             timer-=1;
+            if(timer < 0)timer = 0;
             console.log(timer);
             count_down.innerHTML = timer;
         }, 1000);
@@ -142,6 +149,7 @@ function counter(action){
         count_down.innerHTML = "0";
         already_running = false;
     }
+
 }
 
 let isPaused = false;
