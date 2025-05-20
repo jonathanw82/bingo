@@ -1,16 +1,16 @@
 # Disco Bingo
 
-Disco Bingo, a game created by Jon Wheway, is based on Ostara by LettUs Grow.
+Disco Bingo, a game created by myself for a laugh with my work collegues.
 
-It's a bingo game with a twist. Unlike normal bingo, disco bingo has a dystopian overlord called Dark Ostara, a character based on the Red Queen from the movie franchise Resident Eval.
+It's a bingo game with a twist. Unlike normal bingo, disco bingo has a dystopian overlord voice, a character based on the Red Queen from the movie franchise Resident Eval.
 
 Her sole purpose is to get participants to recreate 70s disco dance moves that can be seen in the video but with modern music. The compare then issues a prize to the best dancer at the end of the game. 
 The bingo side is like any usual game with line, house and 4 corner games.
 
 ### How to run the game!
-The compare logs into the dashboard, using the correct credentials. Shortly after a video starts and Dark Ostara introduces herself and explains how the game works. You will then be redirected to the main dashboard where the Bingo engine can be found. After the dance buttonhas been pressed a video will pop up with dance moves and music, press the close button at the bottom of the screen when the video ends.
+The compare logs into the dashboard, using the password Letmein. Shortly after a video starts and a voice introduces herself and explains how the game works. You will then be redirected to the main dashboard where the Bingo engine can be found. After the dance button is pressed a video will pop up with dance moves and music, press the close button at the bottom of the screen when the video ends.
 
-After all 5 dance videos have been played and all bingo games are played the compare can then press the end credit button where a video will start and Dark Ostara will close the games and a video with credits will show. This is the end of the game simply logout for the next user. 
+After all 5 dance videos have been played and all bingo games are played the compare can then press the end credit button where a video will start and a voice will close the games and a video with credits will show. This is the end of the game simply logout for the next user. 
 
 ### The login screen 
 The login screen consists of a login box where a user name can be entered. If an incorrect user name is entered a button called Not You? can be pressed to refresh the page.
