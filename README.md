@@ -1,3 +1,7 @@
+<h1 align="center">
+   <img src="https://github.com/jonathanw82/bingo/assetts/media.logo.jpeg" alt="logo"/>
+ </h1>
+
 # Disco Bingo
 
 Disco Bingo, a game created by myself for a laugh with my work collegues.
