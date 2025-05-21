@@ -2,8 +2,8 @@
 <a href="https://jonathanw82.github.io/bingo/">
    <img src="https://github.com/jonathanw82/bingo/blob/main/assets/media/logo.jpeg" width="50%" height="auto" alt="logo"/>
    </a>
-   Click image to play the game!
  </h1>
+ <div align="center">Click image to play the game!</div>
 
 
 # Disco Bingo
